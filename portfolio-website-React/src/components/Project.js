@@ -14,7 +14,7 @@ export function Project() {
       try{
         setIsLoading(true);
         setLoadFailed(false);
-        const res = await fetch(`https://www.jamescharnley.com/api/projects/${id}`);
+        const res = await fetch(`https://www.jamescharnley.azurewebsites.net/api/projects/${id}`);
         const data = await res.json();
         setProject(data);
       } catch(err) {
