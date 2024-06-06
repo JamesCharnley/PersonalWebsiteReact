@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+body {
+    background-color: #1a1919;
+    height: 100vh;
+    margin: 0px;
+}
+.no_margin{
+  margin: 0;
+}
+.home_container{
+  background-color: #1a1919;
+  width: 100vw;
+  
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.text_center{
+  text-align: center;
+
+  
+
+}
+
+nav ul li a {
+  opacity: 0;
+  animation: fade 4s forwards;
+  animation-delay: 1s;
+}
+
+@media screen and (min-width: 700px) {
+    
+    h1.main_title{
+      font-size: 50px;
+    }
+    h2.secondary_title{
+      font-size: 40px;
+    }
+}
+@media screen and (max-width: 700px) {
+    
+    h1.main_title{
+      font-size: 30px;
+    }
+    h2.secondary_title{
+      font-size: 25px;
+    }
+}
+
+h1.main_title{
+  font-family: Lucida Console, Courier New, monospace;
+  padding: 10px;
+  opacity: 0;
+  animation: fade 4s forwards;
+  animation-delay: 1s;
+}
+h2.secondary_title{
+  
+  font-family: Lucida Console, Courier New, monospace;
+  padding: 10px;
+  opacity: 0;
+  animation: fade 4s forwards;
+  animation-delay: 1s;
+}
+
+.transform_center_vertical{
+  top: 50%;
+  transform: translateY(15%);
+}
+
+.text_ghost_white{
+  color: ghostwhite;
+}
+
+@keyframes fade {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+  }

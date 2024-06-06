@@ -1,0 +1,14 @@
+.grid_item{
+  grid-column-start: auto;
+  grid-column-end: auto;
+  grid-row-start: auto;
+  grid-row-end: auto;
+  width: 100%;
+  height: 450px;
+  transition: transform .2s;
+ 
+}
+
+.grid_item:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}

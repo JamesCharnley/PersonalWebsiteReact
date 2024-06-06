@@ -1,0 +1,41 @@
+nav {
+	display: block;
+}
+
+nav.nav_links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    font-family: Lucida Console, Courier New, monospace;
+    padding: 10px;
+}
+
+li {
+    display: list-item;
+    
+}
+
+nav.nav_links ul li {
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+nav.nav_links ul li a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+  nav.nav_links ul li a {
+  font-size: larger;
+  }
+    
+}
+@media screen and (max-width: 700px) {
+    nav.nav_links ul li a {
+    font-size: medium;
+    }
+   
+}
