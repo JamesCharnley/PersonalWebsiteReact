@@ -24,6 +24,7 @@ export function Project() {
       }
       
     }
+    
     getProject();
   }, [id]);
 
