@@ -32,7 +32,7 @@ export default function Home() {
           color={"ghostwhite"}
         />
       </div>
-      <Button>Projects</Button>
+      <Button href={"/Projects"}>Projects</Button>
     </div>
   );
 }

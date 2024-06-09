@@ -14,7 +14,9 @@ export function DynamicGrid({filter}) {
       try{
         setLoadFailed(false);
         setIsLoading(true);
-        const res = await fetch("https://www.jamescharnley.azurewebsites.net/api/projects");
+        const res = await fetch(
+          "https://jamescharnleyapi.azurewebsites.net/api/projects"
+        );
         const data = await res.json();
         setProjectList(data);
         
