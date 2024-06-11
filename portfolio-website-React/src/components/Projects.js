@@ -40,9 +40,7 @@ export default function Projects(){
           Game Dev
         </div>
       </div>
-      <div className={projectsStyles.list_container}>
-        <DynamicGrid filter={filter}/>
-      </div>
+      <DynamicGrid filter={filter}/>
     </>
   );
 }

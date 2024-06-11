@@ -60,7 +60,7 @@ export function DynamicGrid({filter}) {
   return (
     <>
     {loadFailed && <p>failed to fetch data 😢</p>}
-    {isLoading && !loadFailed ? <p>Loading...</p> : <div className={gridStyles.grid}>
+    {isLoading && !loadFailed ? <p>Loading...</p> : <div className={gridStyles.list_container}> <div className={gridStyles.grid}>
       {displayedProjects.map((p) => (
         <GridItem key={p.id}>
           <ProjectCard
@@ -72,7 +72,7 @@ export function DynamicGrid({filter}) {
           />
         </GridItem>
       ))}
-    </div>}
+    </div></div>}
     </>
   );
 }

@@ -1,3 +1,14 @@
+.list_container{
+  padding: 0;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  padding-bottom: 70px;
+  background-color: #1a1919;
+  display: flex;
+  justify-content: center;
+}
 .grid{
   background-color: #1a1919;
   width: 99%;

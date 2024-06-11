@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { NavBar } from "./NavBar";
 import Button from "./Button";
 import projectStyles from './Project.module.css';
+import { DynamicGrid } from "./DynamicGrid";
 export function Project() {
 
   const [project, setProject] = useState({});
@@ -46,6 +47,7 @@ export function Project() {
       {isLoading && !loadFailed ? (
         <p>Loading...</p>
       ) : (
+        <>
         <div className={projectStyles.flex_container}>
           <div
             style={{ backgroundImage: `url(${project.imageUrl})` }}
@@ -68,6 +70,10 @@ export function Project() {
             )}
           </div>
         </div>
+        {project.videoUrl && <div className={projectStyles.video_container}> <iframe className={projectStyles.embed_video} title={project.videoUrl} src={project.videoUrl}>
+        </iframe></div>}
+        <DynamicGrid />
+        </>
       )}
     </>
   );
