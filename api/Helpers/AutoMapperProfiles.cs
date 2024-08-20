@@ -11,7 +11,7 @@ namespace api.Helpers
             CreateMap<Project, ProjectDto>();
             CreateMap<ProjectContribution, ProjectContributionDto>();
             CreateMap<Project, ProjectThumbnailDto>();
-            CreateMap<ProjectExternalUrl, ProjectExternalUrl>();
+            CreateMap<ProjectExternalUrl, ProjectExternalUrlDto>();
         }
     }
 }
