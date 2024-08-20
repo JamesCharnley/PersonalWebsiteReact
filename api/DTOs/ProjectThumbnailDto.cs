@@ -7,6 +7,8 @@ namespace api.DTOs
         public string ImageUrl { get; set; }
         public string Title { get; set; }
         public string ShortDescription { get; set; }
+        public int MyProperty { get; set; }
+        public List<ProjectExternalUrlDto> ExternalUrls { get; set; } = new();
         public string Skills {get; set;}
     }
 }
