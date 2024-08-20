@@ -31,15 +31,6 @@ export function Project() {
     getProject();
   }, [id]);
 
-  let btnText = "";
-  if (!isLoading && !loadFailed && project.externalUrl) {
-    if (project.externalUrl.includes("git")) {
-      btnText = "GitHub";
-    } else if (project.externalUrl.includes("itch")) {
-      btnText = "Itch.io";
-    }
-  }
-
   return (
     <>
       <NavBar />
@@ -65,9 +56,10 @@ export function Project() {
                 ))}
             </ul>
             <p className={projectStyles.skills}>{project.skills}</p>
-            {project.externalUrl && (
-              <Button href={project.externalUrl}>{btnText}</Button>
-            )}
+            <div className={projectStyles.buttons_container}>
+              {project.externalUrls && (project.externalUrls.map((e) => <Button href={e.externalUrl}>{e.displayText}</Button>))}
+            </div>
+            
           </div>
         </div>
         {project.videoUrl && <div className={projectStyles.video_container}> <iframe className={projectStyles.embed_video} title={project.videoUrl} src={project.videoUrl}>
