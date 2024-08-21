@@ -17,7 +17,7 @@
   display: grid;
   justify-items: center;
   justify-self: center;
-  grid-template-rows: repeat(auto-fill, 450px);
+  grid-template-rows: repeat(auto-fill, 550px);
   
 }
 

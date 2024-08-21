@@ -9,6 +9,8 @@
 .buttons_container{
   width: 100%;
   display: flex;
+  position: absolute;
+  bottom: 70px;
 }
 .image{
   background-repeat: no-repeat;
@@ -17,6 +19,7 @@
 }
 .info_text{
   padding: 10px;
+  position: relative;
 }
 .video_container{
   padding: 0;

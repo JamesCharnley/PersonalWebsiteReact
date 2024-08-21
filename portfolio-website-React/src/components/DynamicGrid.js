@@ -3,13 +3,17 @@ import ProjectCard from "./ProjectCard";
 import gridStyles from "./DynamicGrid.module.css";
 import { GridItem } from "./GridItem";
 
-export function DynamicGrid({filter}) {
+export function DynamicGrid({filter, setProjectsList, projects}) {
 
   const [projectList, setProjectList] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loadFailed, setLoadFailed] = useState(false);
 
   useEffect(function () {
+    if(projects){
+      setProjectList(projects);
+      return;
+    }
     async function fetchProjects(){
       try{
         setLoadFailed(false);
@@ -19,6 +23,10 @@ export function DynamicGrid({filter}) {
         );
         const data = await res.json();
         setProjectList(data);
+        if(setProjectsList){
+          setProjectsList(data);
+        }
+        
         
       } catch(err){
         setLoadFailed(true);
@@ -28,7 +36,7 @@ export function DynamicGrid({filter}) {
       
     }
     fetchProjects();
-  }, []);
+  }, [projects, setProjectsList]);
 
   let displayedProjects = [];
   if(!isLoading && !loadFailed)
@@ -69,6 +77,7 @@ export function DynamicGrid({filter}) {
             title={p.title}
             description={p.shortDescription}
             skills={p.skills}
+            externalUrls={p.externalUrls}
           />
         </GridItem>
       ))}

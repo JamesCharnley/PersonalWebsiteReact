@@ -4,7 +4,7 @@ import { DynamicGrid } from "./DynamicGrid";
 import { NavBar } from "./NavBar";
 import { useState } from 'react';
 
-export default function Projects(){
+export default function Projects({setProjectsList, projectsList}){
   const [filter, setFilter] = useState("all");
 
   function handleFilterSelect(selection){
@@ -40,7 +40,7 @@ export default function Projects(){
           Game Dev
         </div>
       </div>
-      <DynamicGrid filter={filter}/>
+      <DynamicGrid filter={filter} setProjectsList={setProjectsList} projects={projectsList}/>
     </>
   );
 }

@@ -4,7 +4,7 @@ import { NavBar } from "./NavBar";
 import Button from "./Button";
 import projectStyles from './Project.module.css';
 import { DynamicGrid } from "./DynamicGrid";
-export function Project() {
+export function Project({projectsList}) {
 
   const [project, setProject] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -57,14 +57,14 @@ export function Project() {
             </ul>
             <p className={projectStyles.skills}>{project.skills}</p>
             <div className={projectStyles.buttons_container}>
-              {project.externalUrls && (project.externalUrls.map((e) => <Button href={e.externalUrl}>{e.displayText}</Button>))}
+              {project.externalUrls && (project.externalUrls.map((e) => <Button key={e.id} href={e.externalUrl}>{e.displayText}</Button>))}
             </div>
             
           </div>
         </div>
         {project.videoUrl && <div className={projectStyles.video_container}> <iframe className={projectStyles.embed_video} title={project.videoUrl} src={project.videoUrl}>
         </iframe></div>}
-        <DynamicGrid />
+        <DynamicGrid projectsList={projectsList} />
         </>
       )}
     </>
